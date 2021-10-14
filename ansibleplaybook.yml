@@ -1,0 +1,10 @@
+---
+- name: Copy file and execute
+  hosts: all
+  user: vagrant
+
+  tasks:
+  - name: copy file
+    copy: src=script.py dest=/home/vagrant
+  - name: Execute script
+    command: python3 script.py
